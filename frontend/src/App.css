@@ -1,0 +1,26 @@
+.App {
+  display: flex;
+  height: 100vh; /* Set the app's height to occupy the entire viewport */
+}
+
+.LeftPanel {
+  flex: 1; /* Make the left panel occupy 50% of the app's width */
+  display: flex;
+  flex-direction: column;
+}
+
+.TopPanel {
+  flex: 2; /* Make the top panel occupy 20% of the left panel's height */
+  background-color: #f1f1f1; /* Set the background color of the top panel */
+  border-bottom: 1px solid #ccc; /* Add a vertical line */
+}
+
+.BottomPanel {
+  flex: 3; /* Make the bottom panel occupy the remaining 80% of the left panel's height */
+  background-color: #e5e5e5; /* Set the background color of the bottom panel */
+}
+
+.RightPanel {
+  flex: 1; /* Make the right panel occupy 50% of the app's width */
+  background-color: #f9f9f9; /* Set the background color of the right panel */
+}

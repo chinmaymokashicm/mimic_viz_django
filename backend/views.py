@@ -39,6 +39,11 @@ from .mongo import Mongo as MongoConnect
 mongo_connect = MongoConnect()
 mongo_connect.connect()
 
+def get_unique_subject_ids(request):
+    unique_subject_ids = mongo_connect.db.patients.distinct('subject_id')
+    data = list(unique_subject_ids)
+    return JsonResponse(data, safe=False)
+
 def get_patients_by_subject_id(request, subject_id):
     # Query the patients collection
     patients = mongo_connect.db.patients.find({'subject_id': subject_id}, {"_id": 0})
